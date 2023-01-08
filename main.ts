@@ -15,7 +15,6 @@ export default class ThreeDModelViewerPlugin extends Plugin {
 				let div = document.createElement('div');
 				elm.before(div);
 				if (src?.endsWith(".glb") || src?.endsWith(".gltf") || src?.endsWith(".obj")){
-					console.log('app://local' + path.join(basePath,reldir,src))
 					// https://doc.babylonjs.com/features/featuresDeepDive/babylonViewer/configuringViewer
 					let viewer = new BabylonViewer.DefaultViewer(div, {
 						model: {
