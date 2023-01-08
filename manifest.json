@@ -1,11 +1,11 @@
 {
-	"id": "obsidian-sample-plugin",
-	"name": "Sample Plugin",
+	"id": "three-d-file-viewer",
+	"name": "3-D File Viewer",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "This is a sample plugin for Obsidian. This plugin demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "Drag and drop 3-D model files, such as .glb, .gltf, and .obj file, then you can reder in reading view.",
+	"author": "Kiichi Takeuchi",
+	"authorUrl": "https://kiichitakeuchi.com",
+	"fundingUrl": "https://kiichitakeuchi.com",
 	"isDesktopOnly": false
 }
