@@ -12,13 +12,17 @@ export default class ThreeDModelViewerPlugin extends Plugin {
 			for (let index = 0; index < elems.length; index++) {
 				const elm = elems.item(index);			  
 				const src = elm.getAttribute('src');
-				let div = document.createElement('div');
+				let div = createDiv();
 				elm.before(div);
+				let url = src || '';
+				if (!src?.startsWith('http')){
+					url = 'app://local' + path.join(basePath,reldir,src); // URL needs to be app://local/.... or https://...
+				}
 				if (src?.endsWith(".glb") || src?.endsWith(".gltf") || src?.endsWith(".obj")){
 					// https://doc.babylonjs.com/features/featuresDeepDive/babylonViewer/configuringViewer
 					let viewer = new BabylonViewer.DefaultViewer(div, {
 						model: {
-							url: 'app://local' + path.join(basePath,reldir,src) // URL needs to be app://local/.... or https://...
+							url: url
 						}
 					});
 				}				  
