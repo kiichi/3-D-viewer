@@ -16,7 +16,7 @@ export default class ThreeDModelViewerPlugin extends Plugin {
 				elm.before(div);
 				let url = src || '';
 				if (!src?.startsWith('http')){
-					url = 'app://local' + path.join(basePath,reldir,src); // URL needs to be app://local/.... or https://...
+					url = 'app://local' + path.join(basePath,reldir,src!); // URL needs to be app://local/.... or https://...
 				}
 				if (src?.endsWith(".glb") || src?.endsWith(".gltf") || src?.endsWith(".obj")){
 					// https://doc.babylonjs.com/features/featuresDeepDive/babylonViewer/configuringViewer
